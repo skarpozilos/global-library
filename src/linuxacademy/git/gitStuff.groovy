@@ -1,7 +1,8 @@
 package linuxacademy.git;
 
 def gitCommit(gitPath) {
-	def cmd = "/bin/git --git-dir='${gitPath}' rev-parse HEAD"
+	// def cmd = "/bin/git --git-dir='${gitPath}' rev-parse HEAD"
+	def cmd = "cat '${gitPath}'/.git/HEAD"
 	// def cmd = "git --version"
 	return  cmd.execute().text.trim()
 }
